@@ -1,8 +1,11 @@
 ## phase-1-group-project
 
 **App name:** Keep It Moovy (Moovie, Movie, etc)
+
 **App description:** its a movie rating app, users can post reviews or add a comment, rate or like a movie, make a watch list
+
 **Event listeners:** DOMContentLoaded, click events, like button or submit comment 
+
 **Special feature:** search bar, make a curated list
 
 As a user, I should be able to:

@@ -10,13 +10,15 @@ function init(){
 function RenderDetails(movies){
     const list = document.createElement('ul')
     const titleContainer = document.getElementById('movie-titles')
-    movies.forEach(movie => {
+  movies.forEach(movie => {
+      console.log(movie)
         let title = document.createElement('li');
         title.innerText = movie.title;
         list.appendChild(title)
-        console.log(list.length)
+        
+        // titleContainer.appendChild(list)
     });
-    titleContainer.appendChild(list)
+  
 }
 
 

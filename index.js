@@ -9,9 +9,9 @@ function init(){
 
 // render one poster
 function displayPoster(movie) {
-    const thumbPane = document.getElementById('poster_pane')
-    const poster = document.createElement('img');
-    poster.className = 'poster'
+    let thumbPane = document.getElementById('poster_pane')
+    let poster = document.createElement('img');
+    poster.className = 'poster';
     poster.alt = movie.title;
     poster.src = movie.image;
     thumbPane.appendChild(poster);
@@ -19,7 +19,7 @@ function displayPoster(movie) {
 
 // iterate through posters
 function displayPosters(movies){
-    movies.forEach(poster => displayPoster(poster))
+    movies.forEach(movie => displayPoster(movie))
     // const list = document.createElement('ul')
     // const titleContainer = document.getElementById('movie-titles')
     // movies.forEach(movie => {

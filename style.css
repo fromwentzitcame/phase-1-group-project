@@ -18,3 +18,20 @@ li {
     margin: 1rem 1rem;
     max-width: calc(100vw - 2rem);
 }
+
+#poster_pane img#poster {
+    flex: 1 1 auto;
+    height: 150px;
+    margin: 0px 6px 0px 6px;
+    cursor: pointer;
+}
+
+body {
+    color: #FFFFFF;
+    background-color: #353535;
+}
+
+header {
+    padding: 12px;
+    background-color: #222222;
+}

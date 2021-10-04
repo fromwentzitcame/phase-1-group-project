@@ -1,1 +1,12 @@
 /* add css here */
+
+/* movie list horizontal & no bullet points */
+li {
+    list-style: none;
+    display: inline;
+}
+
+/* search bar */
+#form {
+    float: right;
+}

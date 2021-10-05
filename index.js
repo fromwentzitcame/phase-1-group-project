@@ -1,10 +1,13 @@
 // insert javascript here
 function init(){
-
+// display thumbnails for all movies
     fetch('http://localhost:3000/movies')
         .then(res => res.json())
         .then(data => displayPosters(data))
-
+// display details for first movie upon load
+    // fetch('http://localhost:3000/movies/1')
+    //     .then(res => res.json())
+    //     .then(movie1 => displayDetails(movie1))
     
 
 }
@@ -36,6 +39,7 @@ function displayPosters(movies){
 }
 
 
+//create a function called displayDetails
 
 
 

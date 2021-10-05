@@ -66,7 +66,7 @@ li {
     cursor: pointer;
 }
 
-.list:hover { /* feel free to remove this if it doesn't look good. I am just trying out different things  */
+.list:hover { 
     z-index: 1;
     transform: scale(1.25);
 }
@@ -84,9 +84,20 @@ li {
 #movie-image {
     float: left;
     padding: 30px;
-
+    height: 300px;
 }
 
 #text-details {
     padding: 30px;
 }
+
+/* #movie-display {
+    display: grid;
+	grid-template-columns: 2fr 8fr
+} */
+
+
+/* #movie-information {
+    text-align: left;
+} */
+

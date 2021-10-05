@@ -86,6 +86,10 @@ function bestOldies(){
     .then(data => displayMovies(data))}
 }
 
+function allMovies(){
+    thumbPane.replaceChildren();
+    init();
+}
 
 
 

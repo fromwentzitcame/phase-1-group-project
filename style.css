@@ -1,5 +1,18 @@
 /* add css here */
 
+
+
+header {
+    padding: 12px;
+    background-color: #222222;
+}
+
+
+body {
+    color: #FFFFFF;
+    background-color: #353535;
+}
+
 /* movie list horizontal & no bullet points */
 li {
     list-style: none;
@@ -19,8 +32,8 @@ li {
     max-width: calc(100vw - 2rem);
 }
 
+
 .poster {
-    flex: 1 1 auto;
     height: 200px;
     margin: 20px;
     cursor: pointer;
@@ -33,15 +46,6 @@ li {
     box-shadow: 4px 4px 4px 2px #222222;
 }
 
-body {
-    color: #FFFFFF;
-    background-color: #353535;
-}
-
-header {
-    padding: 12px;
-    background-color: #222222;
-}
 
 #movie-list {
     width: 80%;
@@ -75,4 +79,14 @@ header {
     font-size: 1rem;
     color: black;
     font-family: inherit;
+}
+
+#movie-image {
+    float: left;
+    padding: 30px;
+
+}
+
+#text-details {
+    padding: 30px;
 }

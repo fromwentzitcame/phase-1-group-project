@@ -44,32 +44,7 @@ function displayPosters(movies){
 
 
 
-
-
-
-
-
-
-// function categories(movie){
-  
-//     let list = document.getElementsByClassName('.list')
-//     let category_pane = document.getElementById('category_pane')
-//     let movieposter = document.createElement('img');
-//     list.addEventListener('click', ()=>{
-//         if(list.innertext = 'Top 10 Movies'){
-//             do{
-//                 movieposter.className = 'movieposter';
-//             movieposter.alt = movie.title;
-//             movieposter.src = movie.image;
-           
-//             }while(movie.rank<10);
-//             category_pane.appendChild(movieposter);
-            
-//     }else{console.log('yes')}})
-
-
-//     }
-
+//Create loops to fetch and display data for buttons in thumbpane
 function topTen(){
     let thumbPane = document.getElementById('poster_pane')
     // let category_pane = document.querySelector('#category_pane')
@@ -90,12 +65,45 @@ function Best2010(){
     // let category_pane = document.querySelector('#category_pane')
     // category_pane.replaceChildren();
     thumbPane.replaceChildren();
-    year = 2010
+    year = 2009
     while(year < 2021){
     fetch(`http://localhost:3000/movies/?year=${year++}`)
     .then(res=>res.json())
     .then(data => Display(data))}
 
+}
+
+
+function Best2000(){
+    let thumbPane = document.getElementById('poster_pane')
+    // let category_pane = document.querySelector('#category_pane')
+    // category_pane.replaceChildren();
+    thumbPane.replaceChildren();
+    year = 1999
+    while(year < 2010){
+    fetch(`http://localhost:3000/movies/?year=${year++}`)
+    .then(res=>res.json())
+    .then(data => Display(data))}
+
+}
+
+function bestOldies(){
+    let thumbPane = document.getElementById('poster_pane')
+    // let category_pane = document.querySelector('#category_pane')
+    // category_pane.replaceChildren();
+    thumbPane.replaceChildren();
+    year = 1900
+    while(year < 2000){
+    fetch(`http://localhost:3000/movies/?year=${year++}`)
+    .then(res=>res.json())
+    .then(data => Display(data))}
+
+}
+
+function original(){
+    let thumbPane = document.getElementById('poster_pane')
+    thumbPane.replaceChildren();
+    init();
 }
 
 function Display(movies){
@@ -118,6 +126,8 @@ function Display(movies){
         })
     })
 }
+
+
 
 
 

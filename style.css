@@ -62,7 +62,7 @@ header {
     cursor: pointer;
 }
 
-.list:hover { /* feel free to remove this if it doesn't look good. I am just trying out different things  */
+.list:hover { 
     z-index: 1;
     transform: scale(1.25);
 }
@@ -75,4 +75,21 @@ header {
     font-size: 1rem;
     color: black;
     font-family: inherit;
+}
+
+
+#movie-display {
+    display: grid;
+	grid-template-columns: 2fr 8fr
+}
+
+
+
+#movie-image {
+    height: 300px;
+       
+}
+
+#movie-information {
+    text-align: left;
 }

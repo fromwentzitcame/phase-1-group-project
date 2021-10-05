@@ -15,6 +15,15 @@ function displayPoster(movie) {
     poster.alt = movie.title;
     poster.src = movie.image;
     thumbPane.appendChild(poster);
+
+    poster.addEventListener('click', () => {
+        document.querySelector('#movie-image').src = movie.image
+        document.querySelector('#movie-crew').textContent = movie.crew
+        document.querySelector('#movie-rank').textContent = movie.rank
+        document.querySelector('#movie-title').textContent = movie.title
+        document.querySelector('#movie-year').textContent = movie.year
+        document.querySelector('#movie-rating').textContent = movie.imDbRating
+    })
 }
 
 // iterate through posters
@@ -30,6 +39,8 @@ function displayPosters(movies){
     // });
     // titleContainer.appendChild(list)
 }
+
+
 
 
 

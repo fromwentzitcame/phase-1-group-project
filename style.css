@@ -19,11 +19,18 @@ li {
     max-width: calc(100vw - 2rem);
 }
 
-#poster_pane img.poster {
+.poster {
     flex: 1 1 auto;
     height: 200px;
-    padding: 20px;
+    margin: 20px;
     cursor: pointer;
+}
+
+.poster:hover {
+    z-index: 1;
+    transform: scale(1.05);
+    transition: ease-in 0.05s;
+    box-shadow: 4px 4px 4px 2px #222222;
 }
 
 body {
@@ -68,9 +75,4 @@ header {
     font-size: 1rem;
     color: black;
     font-family: inherit;
-}
-
-.poster:hover {
-    z-index: 1;
-    transform: scale(1.25);
 }

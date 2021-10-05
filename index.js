@@ -16,12 +16,6 @@ function init(){
     fetch('http://localhost:3000/movies')
         .then(res => res.json())
         .then(movies => displayMovies(movies))
-// display details for first movie upon load
-    // fetch('http://localhost:3000/movies/1')
-    //     .then(res => res.json())
-    //     .then(movie1 => displayMovies(movie1))
-    
-
 }
 
 // render one poster
@@ -58,33 +52,43 @@ function topTen(){
         .then(movie => displayMovies(movie))}
 }
 
-function Best2010(){
+function bestOf(yr1, yr2) {
     thumbPane.replaceChildren();
-    year = 2009
-    while(year < 2021){
+    year = yr1
+    while(year < yr2){
     fetch(`http://localhost:3000/movies/?year=${year++}`)
-    .then(res=>res.json())
-    .then(data => displayMovies(data))}
+        .then(res=>res.json())
+        .then(data => displayMovies(data))}
 }
 
 
-function Best2000(){
-    thumbPane.replaceChildren();
-    year = 1999
-    while(year < 2010){
-    fetch(`http://localhost:3000/movies/?year=${year++}`)
-    .then(res=>res.json())
-    .then(data => displayMovies(data))}
-}
+// function best2010(){
+//     thumbPane.replaceChildren();
+//     year = 2009
+//     while(year < 2021){
+//     fetch(`http://localhost:3000/movies/?year=${year++}`)
+//         .then(res=>res.json())
+//         .then(data => displayMovies(data))}
+// }
 
-function bestOldies(){
-    thumbPane.replaceChildren();
-    year = 1900
-    while(year < 2000){
-    fetch(`http://localhost:3000/movies/?year=${year++}`)
-    .then(res=>res.json())
-    .then(data => displayMovies(data))}
-}
+
+// function best2000(){
+//     thumbPane.replaceChildren();
+//     year = 1999
+//     while(year < 2010){
+//     fetch(`http://localhost:3000/movies/?year=${year++}`)
+//         .then(res=>res.json())
+//         .then(data => displayMovies(data))}
+// }
+
+// function bestOldies(){
+//     thumbPane.replaceChildren();
+//     year = 1900
+//     while(year < 2000){
+//     fetch(`http://localhost:3000/movies/?year=${year++}`)
+//         .then(res=>res.json())
+//         .then(data => displayMovies(data))}
+// }
 
 function allMovies(){
     thumbPane.replaceChildren();
@@ -93,6 +97,5 @@ function allMovies(){
 
 
 
-
-
+// call initialization function when the page loads
 document.addEventListener('DOMContentLoaded', init)

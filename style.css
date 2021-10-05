@@ -19,10 +19,10 @@ li {
     max-width: calc(100vw - 2rem);
 }
 
-#poster_pane img#poster {
+#poster_pane img.poster {
     flex: 1 1 auto;
-    height: 150px;
-    margin: 0px 6px 0px 6px;
+    height: 200px;
+    padding: 20px;
     cursor: pointer;
 }
 
@@ -34,4 +34,43 @@ body {
 header {
     padding: 12px;
     background-color: #222222;
+}
+
+#movie-list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.list {
+    color: white;
+    padding: 10px 20px;
+    background-color: orange;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.list:hover { /* feel free to remove this if it doesn't look good. I am just trying out different things  */
+    z-index: 1;
+    transform: scale(1.25);
+}
+
+.search {
+    background-color: white;
+    border: 2px solid color #222222;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: black;
+    font-family: inherit;
+}
+
+.poster:hover {
+    z-index: 1;
+    transform: scale(1.25);
 }

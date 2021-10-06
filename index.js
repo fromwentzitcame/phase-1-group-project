@@ -96,6 +96,17 @@ function allMovies(){
 }
 
 
+// like button 
+
+const button = document.querySelector('.btn')
+
+button.addEventListener('click', () => {
+    button.classList.toggle('liked')
+})
+
+
+
+
 
 // call initialization function when the page loads
 document.addEventListener('DOMContentLoaded', init)

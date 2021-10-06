@@ -1,19 +1,16 @@
 /* add css here */
 
-
-
 header {
     padding: 12px;
     background-color: #222222;
 }
-
 
 body {
     color: #FFFFFF;
     background-color: #353535;
 }
 
-/* movie list horizontal & no bullet points */
+/* nav bar movie list horizontal & no bullet points */
 li {
     list-style: none;
     display: inline;
@@ -32,7 +29,7 @@ li {
     max-width: calc(100vw - 2rem);
 }
 
-
+/* poster formating in thumbnail pane */
 .poster {
     height: 200px;
     margin: 20px;
@@ -91,23 +88,14 @@ li {
     padding: 30px;
 }
 
-/* #movie-display {
-    display: grid;
-	grid-template-columns: 2fr 8fr
-} */
-
-
-/* #movie-information {
-    text-align: left;
-} */
-
+/* 
 :root {
     --red: rgb(209, 3, 3);
     --white: #fff;
     --black: #000;
-}
+} */
 
-.btn {
+/* .btn {
     width: 100px; height: 50px;
     outline: 0;
     border: 2px solid #ccc;
@@ -125,7 +113,7 @@ li {
     border-color: let(--red);
 }
 .btn-like {
-    /* padding: 1.5rem 1.5rem 1.5rem 6rem; */
+    padding: 1.5rem 1.5rem 1.5rem 6rem;
     font-size: 1rem;
     border-radius: 10px;
     background: #fff;
@@ -134,17 +122,17 @@ li {
 .btn-like.liked {
     background: var(--red);
     border-color: var(--red);
-}
+} */
 /*-- Button Icon -- */
-.btn-icon {
+/* .btn-icon {
     display: inline-block;
     width: 20px;
     height: 10px;
     position: absolute;
-    left: 1.5rem;
+    left: 1.5rem; */
     /* transition: 1s cubic-bezier(.21,.04,.26,.99); */
     /* transform: rotate(0deg) */
-}
+/*}
 .btn:hover .btn-icon {
     color: (--red);
 }
@@ -167,13 +155,11 @@ li {
 .liked .btn--icon-liked {
     opacity: 1;
     left: 1.5rem;
-}
+} */
 /*-- Button Content -- */
-.btn-content {
+/* .btn-content {
     transition: transform 0.1s ease;
     display: inline-block;
-    /* position: absolute;
-    right: 0; */
 }
 .liked .btn-content {
     color: (--white);
@@ -193,7 +179,28 @@ li {
 
 .heart {
     text-align: left;
-    /* width: 10px; */
-    /* height: 5px; */
+} */
+
+button {
+    display: inline-block;
+    border-radius: 5px;
+    border-style: hidden;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
 }
 
+button:hover {
+    background-color: red;
+    color: white;
+}
+
+button#liked {
+    background-color: red;
+    color: white;
+}
+
+button#liked:hover {
+    color: black;
+}

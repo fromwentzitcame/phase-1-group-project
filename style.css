@@ -1,13 +1,28 @@
 /* add css here */
+@font-face {
+    font-family: "Hollywood";
+    src: url('hollywood_hills/SF\ Hollywood\ Hills.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    color: #FFFFFF;
+    background-color: #353535;
+    font-family: sans-serif;
+    padding: 10px;
+}
 
 header {
     padding: 12px;
     background-color: #222222;
 }
 
-body {
-    color: #FFFFFF;
-    background-color: #353535;
+h1 {
+    font-family: "Hollywood";
+    font-size: 40pt;
+    text-shadow: 1px 1px 4px orange;
 }
 
 /* nav bar movie list horizontal & no bullet points */
@@ -61,6 +76,7 @@ li {
     margin: 5px;
     display: inline-block;
     cursor: pointer;
+    font-family: "Hollywood";
 }
 
 .list:hover { 
@@ -71,7 +87,7 @@ li {
 .search {
     background-color: white;
     border: 2px solid color #222222;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 50px;
     font-size: 1rem;
     color: black;
@@ -88,99 +104,7 @@ li {
     padding: 30px;
 }
 
-/* 
-:root {
-    --red: rgb(209, 3, 3);
-    --white: #fff;
-    --black: #000;
-} */
-
-/* .btn {
-    width: 100px; height: 50px;
-    outline: 0;
-    border: 2px solid #ccc;
-    color: #000;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    display:flex;
-    justify-content: space-between;
-    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
-    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
-}
-.btn:hover {
-    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
-    border-color: let(--red);
-}
-.btn-like {
-    padding: 1.5rem 1.5rem 1.5rem 6rem;
-    font-size: 1rem;
-    border-radius: 10px;
-    background: #fff;
-    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
-}
-.btn-like.liked {
-    background: var(--red);
-    border-color: var(--red);
-} */
-/*-- Button Icon -- */
-/* .btn-icon {
-    display: inline-block;
-    width: 20px;
-    height: 10px;
-    position: absolute;
-    left: 1.5rem; */
-    /* transition: 1s cubic-bezier(.21,.04,.26,.99); */
-    /* transform: rotate(0deg) */
-/*}
-.btn:hover .btn-icon {
-    color: (--red);
-}
-.btn.liked:hover .btn-icon {
-    color: (--black);
-}
-.liked .btn--icon-default {
-    transform: rotate(-90deg)
-}
-.btn:not(.liked).btn--icon-liked {
-    transform: rotate(-90deg)
-}
-.liked .btn--icon-default,
-.btn--icon-liked {
-    opacity: 0;
-    color: #fff;
-    position: absolute;
-}
-.btn--icon-default,
-.liked .btn--icon-liked {
-    opacity: 1;
-    left: 1.5rem;
-} */
-/*-- Button Content -- */
-/* .btn-content {
-    transition: transform 0.1s ease;
-    display: inline-block;
-}
-.liked .btn-content {
-    color: (--white);
-}
-.btn:hover.liked .btn-content {
-    color: (--black);
-}
-.btn:not(.liked) .btn-content--liked {
-    transform: translate(110px)
-}
-.btn:not(.liked) .btn-content--default {
-    transform: translate(-56px)
-}
-.liked .btn-content--default {
-    transform: translate(24px)
-}
-
-.heart {
-    text-align: left;
-} */
-
+/* button styling */
 button {
     display: inline-block;
     border-radius: 5px;

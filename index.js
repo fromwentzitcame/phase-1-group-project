@@ -32,7 +32,21 @@ function displayMovie(movie) {
         detCrew.textContent = `Crew: ${movie.crew}`
         detRank.textContent = `Rank: ${movie.rank}`
         detTitle.textContent = movie.fullTitle
-        detRating.textContent = movie.imDbRating
+        detRating.textContent = `IMDb Rating ${movie.imDbRating}`
+        let likeBtn = createEl('button')
+        likeBtn.innerText = "Like"
+        likeBtn.id = "not-liked"
+        detailsPane.appendChild(likeBtn)
+
+        likeBtn.addEventListener('click', () => {
+            if (likeBtn.innerText === "Like") {
+                likeBtn.innerText = "♥ Liked";
+                likeBtn.id = "liked";
+            } else {
+                likeBtn.innerText = "Like";
+                likeBtn.id = "not-liked";
+            }
+        });
     })
 }
 
@@ -62,38 +76,21 @@ function bestOf(yr1, yr2) {
 }
 
 
-// function best2010(){
-//     thumbPane.replaceChildren();
-//     year = 2009
-//     while(year < 2021){
-//     fetch(`http://localhost:3000/movies/?year=${year++}`)
-//         .then(res=>res.json())
-//         .then(data => displayMovies(data))}
-// }
-
-
-// function best2000(){
-//     thumbPane.replaceChildren();
-//     year = 1999
-//     while(year < 2010){
-//     fetch(`http://localhost:3000/movies/?year=${year++}`)
-//         .then(res=>res.json())
-//         .then(data => displayMovies(data))}
-// }
-
-// function bestOldies(){
-//     thumbPane.replaceChildren();
-//     year = 1900
-//     while(year < 2000){
-//     fetch(`http://localhost:3000/movies/?year=${year++}`)
-//         .then(res=>res.json())
-//         .then(data => displayMovies(data))}
-// }
-
 function allMovies(){
     thumbPane.replaceChildren();
     init();
 }
+
+
+// like button 
+
+// const button = document.querySelector('.btn')
+
+// button.addEventListener('click', () => {
+//     button.classList.toggle('liked')
+// })
+
+
 
 
 

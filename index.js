@@ -2,13 +2,16 @@
 const createEl = element => document.createElement(element);
 let thumbPane = document.getElementById('poster_pane')
 
+
 //details pane elements
 let detailsPane = document.getElementById('movie-detail')
+let textDetails = document.getElementById('text-details')
 let detImg = document.querySelector('#movie-image')
 let detCrew = document.querySelector('#movie-crew')
 let detRank = document.querySelector('#movie-rank')
 let detTitle = document.querySelector('#movie-title')
 let detRating = document.querySelector('#movie-rating')
+let btnHolder = document.getElementById('btnholder')
 
 
 function init(){
@@ -33,10 +36,13 @@ function displayMovie(movie) {
         detRank.textContent = `Rank: ${movie.rank}`
         detTitle.textContent = movie.fullTitle
         detRating.textContent = `IMDb Rating ${movie.imDbRating}`
+        if (btnHolder != 0) {
+            btnHolder.replaceChildren();
+        }
         let likeBtn = createEl('button')
         likeBtn.innerText = "Like"
         likeBtn.id = "not-liked"
-        detailsPane.appendChild(likeBtn)
+        btnHolder.appendChild(likeBtn)
 
         likeBtn.addEventListener('click', () => {
             if (likeBtn.innerText === "Like") {

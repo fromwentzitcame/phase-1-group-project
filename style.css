@@ -6,7 +6,6 @@
     font-style: normal;
 }
 
-
 body {
     color: #FFFFFF;
     background-color: #353535;
@@ -57,7 +56,6 @@ li {
     transition: ease-in 0.05s;
     box-shadow: 4px 4px 4px 2px #222222;
 }
-
 
 #movie-list {
     width: 80%;

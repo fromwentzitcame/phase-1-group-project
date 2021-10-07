@@ -1,8 +1,8 @@
 
 const createEl = element => document.createElement(element);
-let thumbPane = document.getElementById('poster_pane')
 
-//details pane elements
+//misc elements
+let thumbPane = document.getElementById('poster_pane')
 let detailsPane = document.getElementById('movie-detail')
 let textDetails = document.getElementById('text-details')
 let detImg = document.querySelector('#movie-image')
@@ -38,6 +38,7 @@ function displayMovie(movie) {
         detRank.textContent = `Rank: ${movie.rank}`
         detTitle.textContent = movie.fullTitle
         detRating.textContent = `IMDb Rating ${movie.imDbRating}`
+
     // create like button
         if (btnHolder != 0) {
             btnHolder.replaceChildren();
@@ -46,6 +47,7 @@ function displayMovie(movie) {
         likeBtn.innerText = "Like"
         likeBtn.id = "not-liked"
         btnHolder.appendChild(likeBtn)
+
     // like button interactivity
         likeBtn.addEventListener('click', () => {
             if (likeBtn.innerText === "Like") {
@@ -88,35 +90,23 @@ function allMovies(){
     init();
 }
 
+// search bar functionality
 function searchBar(e) {
     e.preventDefault();
     fetch(`http://localhost:3000/movies`)
         .then(res => res.json())
         .then(data => searchResult(data))
 
-function searchResult(queries) {
-    thumbPane.replaceChildren();
-
-    queries.forEach(query => {
- 
-    if(query.title.toLowerCase().includes(search.value.toLowerCase())){
-            // console.log(search.value)
-            displayMovie(query)
-    }
-    // else{console.log('nope')}
-});
-
+    function searchResult(queries) {
+        thumbPane.replaceChildren();
+        queries.forEach(query => {
+            if(query.title.toLowerCase().includes(search.value.toLowerCase())){
+                displayMovie(query)
+            }
+        });
     form.reset();
+    }
 }
- 
-    
-    
-    
-
-
-
-}
-
 
 // call initialization function when the page loads
 document.addEventListener('DOMContentLoaded', init)

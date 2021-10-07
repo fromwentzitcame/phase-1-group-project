@@ -19,7 +19,7 @@ function init(){
         .then(res => res.json())
         .then(movies => displayMovies(movies));
 
-    let form =document.querySelector('#form')
+    let form = document.querySelector('#form')
     form.addEventListener('submit', searchBar)
 }
 
@@ -88,18 +88,18 @@ function allMovies(){
     init();
 }
 
-function searchBar(e){
+function searchBar(e) {
     e.preventDefault();
-fetch(`http://localhost:3000/movies`)
-.then(res=>res.json())
-.then(data=>searchResult(data))
+    fetch(`http://localhost:3000/movies`)
+        .then(res => res.json())
+        .then(data => searchResult(data))
 
-function searchResult(queries){
+function searchResult(queries) {
     thumbPane.replaceChildren();
 
-    queries.forEach(query=>{
+    queries.forEach(query => {
  
-    if(query.title.includes(search.value)){
+    if(query.title.toLowerCase().includes(search.value.toLowerCase())){
             // console.log(search.value)
             displayMovie(query)
     }

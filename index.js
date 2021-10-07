@@ -11,12 +11,16 @@ let detRank = document.querySelector('#movie-rank')
 let detTitle = document.querySelector('#movie-title')
 let detRating = document.querySelector('#movie-rating')
 let btnHolder = document.getElementById('btnholder')
+let search = document.getElementById('search')
 
 function init(){
 // display thumbnails for all movies upon load
     fetch('http://localhost:3000/movies')
         .then(res => res.json())
-        .then(movies => displayMovies(movies))
+        .then(movies => displayMovies(movies));
+
+    let form = document.querySelector('#form')
+    form.addEventListener('submit', searchBar)
 }
 
 // render one poster
@@ -83,6 +87,36 @@ function allMovies(){
     thumbPane.replaceChildren();
     init();
 }
+
+function searchBar(e) {
+    e.preventDefault();
+    fetch(`http://localhost:3000/movies`)
+        .then(res => res.json())
+        .then(data => searchResult(data))
+
+function searchResult(queries) {
+    thumbPane.replaceChildren();
+
+    queries.forEach(query => {
+ 
+    if(query.title.toLowerCase().includes(search.value.toLowerCase())){
+            // console.log(search.value)
+            displayMovie(query)
+    }
+    // else{console.log('nope')}
+});
+
+    form.reset();
+}
+ 
+    
+    
+    
+
+
+
+}
+
 
 // call initialization function when the page loads
 document.addEventListener('DOMContentLoaded', init)

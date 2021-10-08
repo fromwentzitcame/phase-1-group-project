@@ -100,7 +100,7 @@ function searchBar(e) {
     function searchResult(queries) {
         thumbPane.replaceChildren();
         queries.forEach(query => {
-            if(query.title.toLowerCase().includes(search.value.toLowerCase())){
+            if(query.title.toLowerCase().includes(search.value.toLowerCase()) || query.year == search.value || query.rank == search.value){
                 displayMovie(query)
             }
         });

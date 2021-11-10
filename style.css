@@ -14,7 +14,8 @@ body {
 }
 
 header {
-    padding: 12px;
+    padding: 10px;
+    padding-left: 20px;
     background-color: #222222;
 }
 
@@ -33,6 +34,7 @@ li {
 /* search bar */
 #form {
     float: right;
+    padding: 10px;
 }
 
 /* movie poster thumbnail display */
@@ -75,18 +77,19 @@ li {
     display: inline-block;
     cursor: pointer;
     font-family: "Hollywood";
+    text-shadow: 1px 1px 4px black;
 }
 
 .list:hover { 
     z-index: 1;
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 
 .search {
     background-color: white;
     border: 2px solid color #222222;
     padding: 0.4rem 0.8rem;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 1rem;
     color: black;
     font-family: inherit;

@@ -11,14 +11,18 @@
 </head>
 <body>
     <header id='header'>
-        <!---- search ------------------------------->
-        <form id="form">
-            <input type="text" placeholder="Search" id="search" class="search">
-        </form>
-        <!---- header and description ------------------------------->   
-        <div> 
-            <h1><img src="images/groovy_moovy.png" width='50px'>  Keep It Moovy</h1>
-            <p>Your favorite place to explore and rate the top 50 movies of all time!</p>
+        <div style="display: flex;">
+            <!---- header and description ------------------------------->   
+            <div style="width: 50%;"> 
+                <h1><img src="images/groovy_moovy.png" width='50px'>  Keep It Moovy</h1>
+                <p>Your favorite place to explore and rate the top 50 movies of all time!</p>
+            </div>
+            <!---- search ------------------------------->
+            <div style="width: 50%;">
+                <form id="form">
+                    <input type="text" placeholder="Search" id="search" class="search">
+                </form>
+            </div>
         </div>
     </header>
 
